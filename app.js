@@ -227,3 +227,40 @@ const data = [
       });
     });
 
+(function() {
+    const MENU_SELECTOR = '.menu';
+    const GALLERY_ID = 'menu-gallery-item';
+
+    function updateGalleryItem() {
+        const menu = document.querySelector(MENU_SELECTOR);
+        if (!menu) return;
+
+        const exists = !!document.getElementById(GALLERY_ID);
+
+        if (window.innerWidth > 1000 && !exists) {
+            // Create and append the gallery item
+            const li = document.createElement('li');
+            li.className = 'menu__item';
+            li.id = GALLERY_ID;
+
+            const a = document.createElement('a');
+            a.className = 'menu__link';
+            a.href = 'gallery.html';
+            a.textContent = 'گالری';
+
+            li.appendChild(a);
+            menu.appendChild(li);
+
+        } else if (window.innerWidth <= 1000 && exists) {
+            // Remove it if we shrink below threshold
+            const li = document.getElementById(GALLERY_ID);
+            li && li.parentNode.removeChild(li);
+        }
+    }
+
+    // On initial load
+    document.addEventListener('DOMContentLoaded', updateGalleryItem);
+
+    // Optional: on resize, re-evaluate
+    window.addEventListener('resize', updateGalleryItem);
+})();
