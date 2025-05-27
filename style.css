@@ -100,8 +100,48 @@ header:after{
 
 
 
+@media (max-width: 1600px) {
+    .mountain1 {
+        position: absolute;
+        width: 1250px;     /* 78.125vw × 16px */
+        bottom: -66.6px;   /* -7.4vh × 9px */
+        right: 0;
+        z-index: 19;
+    }
 
+    .person {
+        position: absolute;
+        width: 560px;      /* 35vw × 16px */
+        bottom: -83.3px;   /* -9.26vh × 9px */
+        left: -58.4px;     /* -3.65vw × 16px */
+        z-index: 20;
+    }
 
+    .mountain2 {
+        position: absolute;
+        width: 1040px;     /* 65vw × 16px */
+        left: 0;
+        top: 270px;        /* 30vh × 9px */
+        height: 900px;     /* 100vh × 9px (full height) */
+        z-index: 18;
+    }
+
+    .mountain3 {
+        position: absolute;
+        width: 1120px;     /* 70vw × 16px */
+        bottom: 45px;      /* 5vh × 9px */
+        right: 0;
+        z-index: 17;
+    }
+
+    .sky {
+        position: absolute;
+        width: 1750px;     /* 109.375vw × 16px */
+        bottom: 191.7px;   /* 21.3vh × 9px */
+        height: 900px;     /* 100vh × 9px */
+        right: 0;
+    }
+}
 
 
 .bar{
@@ -227,6 +267,9 @@ section .container > *{
 
     .title{
         font-size: 1.2rem;
+    }
+    .imgContainer{
+        transform: translateY(-100px);
     }
 }
 
@@ -600,7 +643,7 @@ section .container > *{
 
   
   .card__title {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 900;
     color: #fff;
     text-transform: uppercase;
