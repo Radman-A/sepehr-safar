@@ -84,7 +84,7 @@ header:after{
   position: absolute;
   /* 900px ≈ 46.875vw, 100px ≈ 9.26vh */
   width: 70vw;   
-  bottom: 5vh;    
+  bottom: -5vh;    
   right: 0;
   z-index: 17;
 }
